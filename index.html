@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090d18">
+<title>DONE & DU$TED</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#090d18;color:#f4f6fc;font-family:Arial,sans-serif;padding:20px}
+header{text-align:center;padding:20px 0}
+h1{color:#f5bd43;font-size:27px;margin:5px}
+.sub{color:#9ba8bd;font-size:12px;letter-spacing:2px}
+.card{background:#141d30;border:1px solid #263650;border-radius:15px;padding:17px;margin:14px 0}
+.label{color:#9ba8bd;font-size:12px}
+.value{font-size:27px;font-weight:bold;margin-top:8px}
+.green{color:#39d99a}
+.gold{color:#f5bd43}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+h2{font-size:16px;color:#f5bd43}
+.market{display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px solid #29354a}
+button{border:0;border-radius:10px;padding:14px;font-weight:bold;font-size:14px;cursor:pointer}
+.start{background:#eeb83f;color:#101522;width:100%}
+.stop{background:#29354a;color:white;width:100%;margin-top:10px}
+.status{color:#ffcc55;font-weight:bold}
+footer{text-align:center;color:#78869c;font-size:11px;padding:25px}
+</style>
+</head>
+<body>
+<header>
+<div class="gold">🐝 BEE TRADING TECHNOLOGY</div>
+<h1>DONE & DU$TED</h1>
+<div class="sub">AUTOMATED TRADING COMMAND CENTER</div>
+</header>
+
+<div class="grid">
+<div class="card">
+<div class="label">DEMO BALANCE</div>
+<div class="value">€100,000</div>
+</div>
+<div class="card">
+<div class="label">RISK PER TRADE</div>
+<div class="value gold">0.5%</div>
+</div>
+<div class="card">
+<div class="label">DAILY LOSS LIMIT</div>
+<div class="value">2%</div>
+</div>
+<div class="card">
+<div class="label">TIMEFRAME</div>
+<div class="value">M5</div>
+</div>
+</div>
+
+<div class="card">
+<h2>📊 MARKET SCANNER</h2>
+<div class="market"><span>EURUSD</span><span>Waiting</span></div>
+<div class="market"><span>GBPUSD</span><span>Waiting</span></div>
+<div class="market"><span>XAUUSD</span><span>Waiting</span></div>
+<p class="label">Indicators: EMA 50/200 • RSI 14 • MACD</p>
+</div>
+
+<div class="card">
+<h2>🤖 ROBOT CONTROL</h2>
+<p>Status: <span class="status" id="status">NOT CONNECTED</span></p>
+<button class="start" onclick="startRobot()">START DASHBOARD</button>
+<button class="stop" onclick="stopRobot()">STOP DASHBOARD</button>
+<p class="label" id="message">Trading engine not connected. Demo display only.</p>
+</div>
+
+<footer>DONE & DU$TED © 2026<br>TRADE SMART • MANAGE RISK • STAY DISCIPLINED</footer>
+
+<script>
+function startRobot(){
+document.getElementById("status").textContent="DASHBOARD ACTIVE";
+document.getElementById("message").textContent="Dashboard started. MT5 trading connection is not yet active.";
+}
+function stopRobot(){
+document.getElementById("status").textContent="STOPPED";
+document.getElementById("message").textContent="Dashboard stopped.";
+}
+</script>
+</body>
+</html>
